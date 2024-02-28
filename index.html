@@ -1,0 +1,100 @@
+<html>
+    <style>
+        body{
+            background-color: orange;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;color: white;
+        }
+    </style>
+    <script>
+        function getChoice1()
+        {
+            var myChoice = document.getElementById("choice").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "LEFT")
+            {
+                document.getElementById("choice").style.color="blue";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block";
+                
+
+                myQuestion.innerHTML = "OMFG!!! LEFT IS TAKING US INTO A SNOW STORM WHAT THEEEEE";
+            }
+            else if(myChoice === "RIGHT")
+            {
+                document.getElementById("choice").style.color="pink";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
+                document.getElementById ("mainImage").src = "MOOSEAMANIA.JPG"
+                document.getElementById("question").style.color="red"
+                myQuestion.innerHTML = "Yes this road is so much better, Wait is that a MOOSE?!!!?";
+
+            }
+            else
+            {
+                myQuestion.innerHTML = "pee pee poo poo try again";
+            }
+        
+        }
+        function getChoice2()
+        {
+            var answer = document.getElementById("choice2").value;
+            var myQuestion = document.getElementById("question");
+            if(answer === "DODGE IT")
+            {
+                document.getElementById ("mainImage").src = "fire.JPG"
+                document.getElementById("question").style.color="blue"
+                myQuestion.innerHTML = "YOU SURVIVED AND NOW ARE FORCED TO LIVE THE REST OF YOUR LIVES TOGTHER. IN THE DARK STRANDED. JUST YOU AND YOUR CHICK AND SOME FIRE. MAYBE SMORES ON FRIDAY NITES IF YOUR LUCKY.";
+            }
+            else if(answer === "GO THROUGH IT")
+            {
+                myQuestion.innerHTML = "People didn't belive you when you made it through. Yet people doubted you always. Going through something is better than avoiding it. LIFE LESSON ";
+            }
+        }
+
+        function getChoice3()
+        {
+            var answer = document.getElementById("choice3").value;
+            var myQuestion = document.getElementById("question");
+            if(answer === "Si")
+            {
+                document.getElementById("mainImage").src = "battle.JPG"
+                document.getElementById("question").style.color="green"
+                myQuestion.innerHTML = "The story begins with power and abuse but the roads will take you down a road that you wish you never turned on...MONEY IS NOT MORE IMPORTANT THAN FOOD OR LOVE. UNLESS UR MR. KRABS AND can do whatever";
+            }
+            else if(answer === "Nah")
+            {
+                myQuestion.innerHTML = "The road ended at a burger king and now we are loving life eating cheeseburgers!:)";
+            }
+        }
+    </script>
+    <body>
+
+        <h1>A CRAZY TURN... INTO A T TURN ROAD</h1>
+        <br>
+        <img src="forest.JPG" id="mainImage"  height="auto" width="921" > 
+    <div id="question">
+    <br>
+    
+        A day came where a man and his chick needed to make a choice. I will never forget the day I made my girl drive because she put us in this mess. However
+        the days driving have led us to a T turn in the road. We both don't know which way to go. We feel so lost already. And it is dark out.
+        <br>
+        We had only two choices. LEFT or RIGHT.
+    </div>
+
+        <br>
+        <input type="text" size="18" id="choice" value="Type LEFT or RIGHT">
+        <button id="btnSubmit" onclick="getChoice1();">now click if you dare...</button>
+       
+        <input type="text" size="45" id="choice2" value="Type DODGE IT or GO THROUGH IT." style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">click for more to the madness</button>
+
+        <input type="text" size="30" id="choice3" value=" Type Si or Nah."  style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none">Click to see your end</button>
+
+    </body>
+
+</html>
